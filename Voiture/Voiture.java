@@ -1,3 +1,4 @@
+package Voiture;
 public class Voiture{
 
     String marque;

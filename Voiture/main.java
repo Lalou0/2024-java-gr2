@@ -1,3 +1,4 @@
+package Voiture;
 public class main {
     public static void Main(String[] args) {
         Voiture voiture = new Voiture();
