@@ -1,0 +1,107 @@
+/* 🌟 Thème clair (mode par défaut) */
+/* Palette claire et réglages globaux */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #F4F4F4;          /* Fond clair de l'application */
+    -fx-text-fill: #333333;                /* Couleur de texte par défaut (gris foncé) */
+    -fx-accent: #C73A52;                   /* Couleur d’accent (rouge bordeaux clair) */
+    -fx-focus-color: #C73A52;              /* Couleur de surbrillance des éléments focussés */
+    -fx-faint-focus-color: rgba(199,58,82,0.3);  /* Surbrillance atténuée (halo) */
+    -fx-padding: 20px;                     /* Marge intérieure pour aérer la mise en page */
+}
+
+/* 🔘 Boutons arrondis avec effet de reflet */
+.button {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-accent, 20%), -fx-accent);
+    -fx-text-fill: #FFFFFF;               /* Texte blanc sur fond bordeaux */
+    -fx-font-size: 14px;
+    -fx-padding: 8px 15px;               /* Espacement interne du bouton */
+    -fx-background-radius: 20px;         /* Bords arrondis du bouton */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0, 0, 2);  /* Ombre portée légère */
+    -fx-cursor: hand;                    /* Curseur "main" au survol */
+}
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-accent, 30%), derive(-fx-accent, -10%));
+}
+.button:pressed {
+    -fx-background-color: derive(-fx-accent, -20%);
+}
+
+/* 📝 Champs de texte arrondis (TextField, PasswordField, TextArea) */
+.text-field, .password-field, .text-area {
+    -fx-background-color: #FFFFFF;       /* Fond blanc pour les champs */
+    -fx-background-radius: 15px;
+    -fx-text-fill: #000000;              /* Texte noir par défaut */
+    -fx-pref-width: 300px;                /* Largeur maximale par défaut */
+    -fx-prompt-text-fill: #888888;       /* Texte indicatif (placeholder) gris */
+    -fx-background-radius: 15px;         /* Coins arrondis du champ */
+    -fx-border-radius: 15px;
+    -fx-border-color: #CCCCCC;           /* Bordure grise claire par défaut */
+    -fx-border-width: 1px;
+    -fx-max-width: 300px;
+    -fx-padding: 5px 10px;
+}
+.text-field:focused, .password-field:focused, .text-area:focused {
+    -fx-border-color: -fx-accent;        /* Bordure bordeaux en focus */
+    -fx-border-width: 2px;
+}
+
+/* 🎯 Alignement centré pour les conteneurs */
+.centered {
+    -fx-alignment: center;               /* Centre le contenu (horizontalement et verticalement) */
+}
+
+/* 🌙 Thème sombre (mode nuit) */
+/* Palette sombre de base */
+.root.dark-mode {
+    -fx-background-color: #2B2C5A;       /* Fond bleu nuit */
+    -fx-base: #2B2C5A;                   /* Couleur de base pour les contrôles */
+    -fx-text-fill: #F0F0F0;              /* Texte par défaut clair sur fond sombre */
+    -fx-accent: #C73A52;                 /* Accent bordeaux (reste identique) */
+    -fx-focus-color: #C73A52;           /* Surbrillance de focus bordeaux */
+    -fx-faint-focus-color: rgba(199,58,82,0.5);
+}
+
+/* ✏️ Texte et labels en mode sombre */
+.root.dark-mode .label {
+    -fx-text-fill: #E0E0E0;              /* Libellés en gris très clair */
+}
+
+/* 🔘 Boutons en mode sombre */
+.root.dark-mode .button {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-accent, 30%), derive(-fx-accent, -10%));
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 20px;
+    /* (Les autres propriétés comme padding, effet d'ombre, etc., héritent du thème clair) */
+}
+.root.dark-mode .button:hover {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-accent, 40%), -fx-accent);
+}
+.root.dark-mode .button:pressed {
+    -fx-background-color: derive(-fx-accent, -20%);
+}
+
+/* 📝 Champs de texte en mode sombre */
+.root.dark-mode .text-field,
+.root.dark-mode .password-field,
+.root.dark-mode .text-area {
+    -fx-background-color: #3C3F66;       /* Fond des champs (gris bleuté foncé) */
+    -fx-text-fill: #FFFFFF;              /* Texte blanc dans les champs */
+    -fx-prompt-text-fill: #AAAAAA;       /* Placeholder gris moyen */
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-color: #555555;           /* Bordure gris foncé par défaut */
+    -fx-border-width: 1px;
+}
+.root.dark-mode .text-field:focused,
+.root.dark-mode .password-field:focused,
+.root.dark-mode .text-area:focused {
+    -fx-border-color: -fx-accent;        /* Bordure bordeaux en focus */
+    -fx-border-width: 2px;
+}
+
+.hbox {
+    -fx-spacing: 15px;  /* Augmente l'espace entre les boutons */
+    -fx-alignment: center;
+}
